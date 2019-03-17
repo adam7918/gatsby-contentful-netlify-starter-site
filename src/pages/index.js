@@ -5,7 +5,18 @@ const HomePage = () => (
   <StaticQuery
     query={graphql`
       query HomePage {
-        
+        contentfulHomePage {
+          title
+          date
+          content {
+            content
+          }
+          image {
+            file {
+              url
+            }
+          }
+        }
       }
     `}
     render={({
